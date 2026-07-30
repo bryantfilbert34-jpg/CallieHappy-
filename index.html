@@ -3,194 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Girlfriend Day ❤️</title>
+<title>Happy Girlfriend Day Callie ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-overflow:hidden;
-background:linear-gradient(180deg,#ffb6d9,#ffcce5,#fff0f6);
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-transition:1s;
-}
-
-.hidden{
-opacity:0;
-pointer-events:none;
-transform:translateX(100%);
-}
-
-h1{
-font-size:55px;
-color:white;
-text-shadow:0 0 20px hotpink;
-animation:fade 2s infinite alternate;
-}
-
-h2{
-margin-top:20px;
-color:white;
-font-size:28px;
-}
-
-p{
-margin-top:25px;
-width:80%;
-max-width:700px;
-text-align:center;
-font-size:22px;
-color:white;
-line-height:1.8;
-}
-
-button{
-margin-top:40px;
-padding:18px 40px;
-font-size:22px;
-border:none;
-border-radius:50px;
-background:#ff4fa3;
-color:white;
-cursor:pointer;
-box-shadow:0 0 25px hotpink;
-}
-
-button:hover{
-transform:scale(1.1);
-}
-
-.heart{
-position:absolute;
-font-size:30px;
-animation:fly 8s linear infinite;
-opacity:.8;
-}
-
-@keyframes fly{
-0%{
-transform:translateY(110vh) rotate(0deg);
-}
-100%{
-transform:translateY(-120vh) rotate(360deg);
-}
-}
-
-@keyframes fade{
-from{transform:scale(1);}
-to{transform:scale(1.1);}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-<div id="hearts"></div>
+<div class="hearts"></div>
 
-<div class="slide" id="s1">
+<div class="container">
 
-<h1>💖 Happy Girlfriend Day 💖</h1>
+    <div class="panel">
 
-<h2>Untuk Callie 🌸</h2>
+        <div class="flower">🌸</div>
 
-<p>
-Hari ini bukan sekadar hari biasa.<br><br>
+        <h1>
+            Happy Girlfriend Day
+        </h1>
 
-Hari ini aku ingin mengingatkan kalau kamu adalah
-orang yang paling berharga di hidupku.
-</p>
+        <h2>
+            Sayangku Callie yang Cantik ❤️
+        </h2>
 
-<button onclick="next()">
-Lanjut ❤️
-</button>
+        <div class="line"></div>
 
-</div>
+        <p>
+            Terima kasih sudah hadir di hidupku.
+            Kamu adalah seseorang yang selalu membuat hariku lebih indah,
+            lebih berwarna, dan penuh kebahagiaan.
+        </p>
 
-<div class="slide hidden" id="s2">
+        <p>
+            Aku berharap kita selalu bersama,
+            melewati banyak cerita,
+            tertawa bersama,
+            dan menciptakan kenangan yang tidak terlupakan.
+        </p>
 
-<h1>I Love You</h1>
+        <button onclick="showLove()">
+            Klik Pesan Cinta 💌
+        </button>
 
-<p>
+        <div id="loveMessage">
+            Aku sayang kamu Callie ❤️<br>
+            Kamu adalah duniaku 🌹
+        </div>
 
-Terima kasih sudah hadir.
-
-Terima kasih sudah bertahan.
-
-Terima kasih sudah menjadi rumah yang paling nyaman.
-
-Aku mungkin bukan orang yang sempurna,
-tapi aku akan selalu berusaha menjadi laki-laki terbaik untukmu.
-
-Aku mencintaimu hari ini.
-
-Besok.
-
-Selamanya.
-
-❤️
-</p>
-
-<button onclick="love()">
-Peluk Aku 💕
-</button>
+    </div>
 
 </div>
 
-<script>
-
-function next(){
-
-document.getElementById("s1").classList.add("hidden");
-
-document.getElementById("s2").classList.remove("hidden");
-
-}
-
-function love(){
-
-alert("Happy Girlfriend Day ❤️\\n\\nI Love You Forever Callie 🌸");
-
-}
-
-setInterval(()=>{
-
-let h=document.createElement("div");
-
-h.className="heart";
-
-h.innerHTML=["💖","🌸","💕","💗"][Math.floor(Math.random()*4)];
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.fontSize=(20+Math.random()*40)+"px";
-
-h.style.animationDuration=(4+Math.random()*4)+"s";
-
-document.body.appendChild(h);
-
-setTimeout(()=>{
-
-h.remove();
-
-},8000);
-
-},180);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
